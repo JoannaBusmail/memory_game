@@ -1,0 +1,30 @@
+.container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.board {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+
+//TABLET
+@media(min-width: 768px){
+    width: 700px;
+    margin-top: 100px;
+   
+}
+
+}
+.imageStyle{
+    width: 130px;
+    border: 3px solid rgb(195, 188, 193);
+    margin: 1px 1px 1px 1px;
+
+    @media(min-width: 768px){
+        width:170px;
+      
+    }
+
+}
