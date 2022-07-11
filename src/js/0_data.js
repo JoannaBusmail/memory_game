@@ -2,10 +2,6 @@
 
 const imageArray = [
   {
-    name: 'blank',
-    image: 'assets/images/blank.jpg',
-  },
-  {
     name: 'cat',
     image: 'assets/images/cat.png',
   },
