@@ -3,6 +3,7 @@
 const board = document.querySelector('.js_board');
 const score = document.querySelector('.js_score');
 const result = document.querySelector('.js_result');
+const restartBtn = document.querySelector('.js_restartBtn');
 let elementChosen = [];
 let elementChosenId = [];
 let cardsWon = [];
@@ -35,7 +36,7 @@ A cada elementos le agrego un listener CLICK y una funcion para manejar dicho cl
 function printBoard() {
   for (let i = 0; i < imageArray.length; i++) {
     const element = document.createElement('img');
-    element.setAttribute('src', 'assets/images/blank.jpg');
+    element.setAttribute('src', 'assets/images/blankThun.png');
     element.setAttribute('id', i);
     element.classList.add('imageStyle');
     board.appendChild(element);
@@ -61,8 +62,8 @@ function handleMatch() {
 
   console.log(cards);
   if (elementChosen[0] === elementChosen[1]) {
-    cards[chosenIdOne].setAttribute('src', 'assets/images/ok.png');
-    cards[chosenIdTwo].setAttribute('src', 'assets/images/ok.png');
+    cards[chosenIdOne].setAttribute('src', 'assets/images/cool.png');
+    cards[chosenIdTwo].setAttribute('src', 'assets/images/cool.png');
     cards[chosenIdOne].removeEventListener('click', handleClickElement);
     cards[chosenIdTwo].removeEventListener('click', handleClickElement);
     cardsWon.push(elementChosen[0], elementChosen[1]);
@@ -70,8 +71,8 @@ function handleMatch() {
     console.log(cardsWon);
     console.log(imageArray);
   } else {
-    cards[chosenIdOne].setAttribute('src', 'assets/images/blank.jpg');
-    cards[chosenIdTwo].setAttribute('src', 'assets/images/blank.jpg');
+    cards[chosenIdOne].setAttribute('src', 'assets/images/blankThun.png');
+    cards[chosenIdTwo].setAttribute('src', 'assets/images/blankThun.png');
   }
 
   handleScore();
@@ -143,3 +144,20 @@ function handleClickElement(event) {
   const clickedElement = this.getAttribute('id');
   console.log(clickedElement);
 }*/
+
+function handleClickRestarBtn(ev) {
+  ev.preventDefault();
+  if (cardsWon.length === 0 && initialScore !== 0) {
+    initialScore = 0;
+  } else if (cardsWon.length !== 0 && initialScore !== 0) {
+    initialScore = 0;
+    location.reload();
+
+    //cardsWon = [];
+  }
+  console.log(cardsWon);
+
+  score.innerHTML = `${initialScore}`;
+}
+
+restartBtn.addEventListener('click', handleClickRestarBtn);

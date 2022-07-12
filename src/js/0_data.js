@@ -30,8 +30,8 @@ const imageArray = [
     image: 'assets/images/hand.png',
   },
   {
-    name: 'heart',
-    image: 'assets/images/heart.png',
+    name: 'clap',
+    image: 'assets/images/clap.png',
   },
   {
     name: 'icecream',
@@ -78,8 +78,8 @@ const imageArray = [
     image: 'assets/images/hand.png',
   },
   {
-    name: 'heart',
-    image: 'assets/images/heart.png',
+    name: 'clap',
+    image: 'assets/images/clap.png',
   },
   {
     name: 'icecream',
