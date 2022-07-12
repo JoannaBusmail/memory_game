@@ -1,9 +1,12 @@
 'use strict';
 // * ******** 1.Creo un unico elemento DIV en el HTML que contendrá mi tablero
 const board = document.querySelector('.js_board');
-
+const score = document.querySelector('.js_score');
+const result = document.querySelector('.js_result');
 let elementChosen = [];
 let elementChosenId = [];
+let cardsWon = [];
+let initialScore = 0;
 
 // **********  2. Recorre array de forma aleatoria (0_data.js)
 //sort = ordena valores deun array en strings - segun unicode
@@ -48,18 +51,31 @@ printBoard();
 5.b -- si el dato del array donde he guardado el nombre en posicion 0 y 1 
       5.b.a -- por cada dato que contiene el elemento IMG  --> cada ID de cada elemento en la posicion 0 y 1 le agrego el atributo con la imagen OK , si COINCIDEN
       5.b.b -- si no coinciden le agrego la imagen BLANk
+5.c -- agrego removeListener, porque sino puedo seguir clicando  y hace cosas raras
 */
 
 function handleMatch() {
   const cards = document.querySelectorAll('img');
+  const chosenIdOne = elementChosenId[0];
+  const chosenIdTwo = elementChosenId[1];
+
   console.log(cards);
   if (elementChosen[0] === elementChosen[1]) {
-    cards[elementChosenId[0]].setAttribute('src', 'assets/images/ok.png');
-    cards[elementChosenId[1]].setAttribute('src', 'assets/images/ok.png');
+    cards[chosenIdOne].setAttribute('src', 'assets/images/ok.png');
+    cards[chosenIdTwo].setAttribute('src', 'assets/images/ok.png');
+    cards[chosenIdOne].removeEventListener('click', handleClickElement);
+    cards[chosenIdTwo].removeEventListener('click', handleClickElement);
+    cardsWon.push(elementChosen[0], elementChosen[1]);
+
+    console.log(cardsWon);
+    console.log(imageArray);
   } else {
-    cards[elementChosenId[0]].setAttribute('src', 'assets/images/blank.jpg');
-    cards[elementChosenId[1]].setAttribute('src', 'assets/images/blank.jpg');
+    cards[chosenIdOne].setAttribute('src', 'assets/images/blank.jpg');
+    cards[chosenIdTwo].setAttribute('src', 'assets/images/blank.jpg');
   }
+
+  handleScore();
+  winLose();
 
   elementChosen = [];
   elementChosenId = [];
@@ -68,16 +84,36 @@ function handleMatch() {
 
 /*function handleMatch() {
   if (elementChosen[0] === elementChosen[1]) {
+    elementChosen[0].createElement('img');
+    elementChosen[1].createElement('img');
     elementChosen[0].setAttribute('src', 'assets/images/ok.png');
     elementChosen[1].setAttribute('src', 'assets/images/ok.png');
   } else {
+    elementChosen[0].createElement('img');
+    elementChosen[1].createElement('img');
     elementChosen[0].setAttribute('src', 'assets/images/blank.jpg');
     elementChosen[1].setAttribute('src', 'assets/images/blank.jpg');
   }
 
   elementChosen = [];
-  
 }*/
+
+function handleScore() {
+  if (elementChosen[0] === elementChosen[1]) {
+    initialScore += 100;
+  } else {
+    initialScore -= 60;
+  }
+  score.innerHTML = `${initialScore}`;
+}
+
+function winLose() {
+  if (cardsWon.length === imageArray.length && initialScore > 0) {
+    result.innerHTML = `You Win`;
+  } else if (cardsWon.length === imageArray.length && initialScore < 0) {
+    result.innerHTML = `You Lose`;
+  }
+}
 
 /* ********   4. Funcion que controla el click sobre cada elemento
 4.a -- Identifico que elemento he clicado
