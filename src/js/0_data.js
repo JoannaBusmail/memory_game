@@ -6,8 +6,8 @@ const imageArray = [
     image: 'assets/images/cat.png',
   },
   {
-    name: 'city',
-    image: 'assets/images/city.png',
+    name: 'cactus',
+    image: 'assets/images/cactus.png',
   },
   {
     name: 'coffee',
@@ -22,40 +22,40 @@ const imageArray = [
     image: 'assets/images/ghost.png',
   },
   {
-    name: 'girl',
-    image: 'assets/images/girl.png',
+    name: 'lips',
+    image: 'assets/images/lips.png',
   },
   {
     name: 'hand',
     image: 'assets/images/hand.png',
   },
   {
-    name: 'clap',
-    image: 'assets/images/clap.png',
+    name: 'donuts',
+    image: 'assets/images/donuts.png',
   },
   {
     name: 'icecream',
     image: 'assets/images/icecream.png',
   },
   {
-    name: 'land',
-    image: 'assets/images/land.png',
+    name: 'music',
+    image: 'assets/images/music.png',
   },
   {
-    name: 'meal',
-    image: 'assets/images/meal.png',
+    name: 'ray',
+    image: 'assets/images/ray.png',
   },
   {
-    name: 'sloth',
-    image: 'assets/images/sloth.png',
+    name: 'casette',
+    image: 'assets/images/casette.png',
   },
   {
     name: 'cat',
     image: 'assets/images/cat.png',
   },
   {
-    name: 'city',
-    image: 'assets/images/city.png',
+    name: 'cactus',
+    image: 'assets/images/cactus.png',
   },
   {
     name: 'coffee',
@@ -70,31 +70,31 @@ const imageArray = [
     image: 'assets/images/ghost.png',
   },
   {
-    name: 'girl',
-    image: 'assets/images/girl.png',
+    name: 'lips',
+    image: 'assets/images/lips.png',
   },
   {
     name: 'hand',
     image: 'assets/images/hand.png',
   },
   {
-    name: 'clap',
-    image: 'assets/images/clap.png',
+    name: 'donuts',
+    image: 'assets/images/donuts.png',
   },
   {
     name: 'icecream',
     image: 'assets/images/icecream.png',
   },
   {
-    name: 'land',
-    image: 'assets/images/land.png',
+    name: 'music',
+    image: 'assets/images/music.png',
   },
   {
-    name: 'meal',
-    image: 'assets/images/meal.png',
+    name: 'ray',
+    image: 'assets/images/ray.png',
   },
   {
-    name: 'sloth',
-    image: 'assets/images/sloth.png',
+    name: 'casette',
+    image: 'assets/images/casette.png',
   },
 ];
