@@ -2,67 +2,55 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gantari&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!--STYLES-->
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="icon" href="./assets/images/favicon.png" />
+    <!--IMAGENES-->
+    <link rel="blank" href=".assets/images/blank.jpg" />
+    <link rel="cat" href="./assets/images/cat.png" />
+    <link rel="city" href="./assets/images/city.png" />
+    <link rel="coffee" href="./assets/images/coffee.png" />
+    <link rel="cupcakes" href="./assets/images/cupcakes.png" />
+    <link rel="ghost" href="./assets/images/ghost.png" />
+    <link rel="girl" href="./assets/images/girl.png" />
+    <link rel="hand" href="./assets/images/hand.png" />
+    <link rel="heart" href="./assets/images/heart.png" />
+    <link rel="icecream" href="./assets/images/icecream.png" />
+    <link rel="land" href="./assets/images/land.png" />
+    <link rel="meal" href="./assets/images/meal.png" />
+    <link rel="sloth" href="./assets/images/sloth.png" />
   </head>
-
   <body>
-    <div class="page">
-      <header class="page__header">
-        <img src="./assets/images/logo-adalab.png" alt="Adalab">
-        <h1>Bienvenidos a Adalab</h1>
-      </header>
+    <!--PARTIALS-->
+    <header class="container_header">
+      <h1 class="header">Memory Game</h1>
+    </header>
 
-      <main class="page__main">
-        <h2>Este es el starter kit de Adalab</h2>
-        <p>Lo usamos para aprender:</p>
-        <ul class="main__list">
-          <li>Sass</li>
-          <li>HTML partials</li>
-          <li>Gulp</li>
-          <li>y muchas cosas más</li>
-        </ul>
-        <p>Si quieres saber cúales son las rutas correctas para:</p>
-        <ul class="main__list">
-          <li>
-            una <code class="code">&lt;img /&gt;</code> mira el fichero
-            <code class="code">./src/html/partials/header.html</code>.
-          </li>
-          <li>
-            y para un <code class="code">background-image</code> mira el fichero
-            <code class="code">./src/html/scss/layout/_page.scss</code>.
-          </li>
-        </ul>
-        <p>
-          Si quieres saber cómo usar un partial HTML dentro de otro partial, busca en la carperta
-          <code class="code">./src/html/index.html</code> y
-          <code class="code">./src/html/partials/main.html</code>, y verás cómo estamos creando estos
-          enlaces:
-        </p>
-        <ul class="main__list">
-          <li>
-            <a class="link__adalab" href="https://adalab.es">Adalab</a>
+    <section>
+      <div class="container">
+        <div class="board js_board"></div>
 
-          </li>
-          <li>
-            <a class="" href="./more-info.html">Más info del starter kit</a>
+        <h3 class="container_score">
+          Score:
+          <p class="score js_score">0</p>
+        </h3>
 
-          </li>
-        </ul>
-      </main>
+        <h4 class="result js_result"></h4>
+        <button class="restartBtn js_restartBtn">RESTART</button>
+        <div class="restartBack"></div>
+      </div>
+    </section>
 
-      <footer class="page__footer">
-        <small>
-          &copy; Todos los derechos reservados
-          <a class="link__adalab" href="https://adalab.es">Adalab</a>
-
-        </small>
-      </footer>
-
-    </div>
-    <script src="./assets/js/main.js"></script>
+    <!--JS-->
+    <script type="text/Javascript" src="./assets/js/main.js"></script>
   </body>
 </html>
